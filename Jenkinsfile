@@ -8,7 +8,9 @@ pipeline {
             }
         }
         stage ("build"){
-           sh 'echo testing'
+            steps{
+                           sh 'echo testing'
+            }
         }
     }
 }
