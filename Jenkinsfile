@@ -8,13 +8,10 @@ pipeline {
             }
         }
         stage ("build"){
-            when {
-                env.branch == "master"
-            }
-            steps{                
-                           sh 'echo testing'
-                           
-            }
+    when { branch "master" }
+    steps {
+        sh 'echo test'
+    }
         }
     }
 }
