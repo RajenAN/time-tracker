@@ -8,7 +8,9 @@ pipeline {
             }
         }
         stage ("build"){
-            when env.branch = "master"
+            when {
+                env.branch == "master"
+            }
             steps{                
                            sh 'echo testing'
                            
