@@ -8,8 +8,10 @@ pipeline {
             }
         }
         stage ("build"){
-            steps{
+            when branch = "master"
+            steps{                
                            sh 'echo testing'
+                           
             }
         }
     }
